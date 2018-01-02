@@ -1,13 +1,15 @@
 <!doctype html>
 <html>
-<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  </head>
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-  	  <a-marker preset="hiro">
-        <a-box position='0 0.5 0' material='color: black;'></a-box>
-  	  </a-marker>
-  	  <a-entity camera></a-entity>
+    <a-scene embedded arjs artoolkit="detectionMode: mono_matrix; sourceType: webcam; matrixCodeType: 3x3_PARITY65;">
+      <a-marker type="barcode" value="8">
+        <a-box position='0 0.5 0' material='color: red;'></a-box>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
