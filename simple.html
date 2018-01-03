@@ -38,7 +38,7 @@
       <a-assets>
         <video id="beach" playsinline webkit-playsinline autoplay loop="true" src="beach.mp4"></video>
       </a-assets>
-      
+      <!--
       <a-marker type="barcode" value="5">
         <a-box position="0 0.5 0" material="color: blue;"></a-box>
       </a-marker>
@@ -46,8 +46,9 @@
       <a-marker type="barcode" value="20">
         <a-video src="#beach" width="16" height="9" play-on-hover></a-video>
       </a-marker>
-      
-      <a-entity camera mouse-cursor></a-entity>
+      -->
+      <a-video src="#beach" width="16" height="9" play-on-hover></a-video>
+      <a-entity camera wasd-controls mouse-cursor></a-entity>
     </a-scene>
   </body>
 </html>
