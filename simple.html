@@ -4,19 +4,28 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.4.9/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
     
     <script>
       AFRAME.registerComponent('play-on-hover', {
+        schema: {default: ''},
         init: function () {
           var el = this.el;
           var video_player = el.getAttribute('material').src;
           
-          el.addEventListener('mouseenter', function () {
-            if (video_player.paused)
+          el.addEventListener('click', () => {
+            if (!video_player.played)
+              video_player.play();
+            else
+              video_player.pause();
+          });
+          
+          el.addEventListener('mouseenter', () => {
+            if (!video_player.played)
               video_player.play();
           });
           
-          el.addEventListener('mouseleave', function () {
+          el.addEventListener('mouseleave', () => {
             if (!video_player.paused)
               video_player.pause();
           });
@@ -38,9 +47,7 @@
         <a-video src="#beach" width="16" height="9" play-on-hover></a-video>
       </a-marker>
       
-      <a-entity camera>
-        <a-cursor id="cursor"></a-cursor>
-      </a-entity>
+      <a-entity camera mouse-cursor></a-entity>
     </a-scene>
   </body>
 </html>
