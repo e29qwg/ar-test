@@ -11,7 +11,7 @@
         },
         init: function () {
           var el = this.el;
-          var video_player = document.querySelector(this.el.getAttribute('src'));
+          var video_player = document.querySelector(el.getAttribute('src'));
           
           el.addEventListener('mouseenter', function () {
             if (video_player.paused)
