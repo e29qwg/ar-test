@@ -2,9 +2,8 @@
 <html>
   <head>
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.4.9/aframe/build/aframe-ar.js"></script>
-    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
     
     <script>
       AFRAME.registerComponent('play-on-hover', {
@@ -52,7 +51,7 @@
       </a-marker>
       -->
       <a-video src="#beach" width="16" height="9" play-on-hover></a-video>
-      <a-entity camera wasd-controls mouse-cursor>
+      <a-entity camera wasd-controls look-controls>
         <a-cursor fuse="true" color="cyan"></a-cursor>
       </a-entity>
     </a-scene>
