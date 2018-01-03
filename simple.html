@@ -21,13 +21,17 @@
           });
           
           el.addEventListener('mouseenter', () => {
-            if (!video_player.played)
+            if (!video_player.played) {
               video_player.play();
+              console.log("PLAYED");
+            }
           });
           
           el.addEventListener('mouseleave', () => {
-            if (!video_player.paused)
+            if (!video_player.paused) {
               video_player.pause();
+              console.log("PAUSED");
+            }
           });
         }
       });
