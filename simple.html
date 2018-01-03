@@ -12,13 +12,6 @@
           var el = this.el;
           var video_player = el.getAttribute('material').src;
           
-          el.addEventListener('click', () => {
-            if (video_player.paused)
-              video_player.play();
-            else
-              video_player.pause();
-          });
-          
           el.addEventListener('mouseenter', () => {
             if (video_player.paused) {
               video_player.play();
