@@ -14,13 +14,13 @@
           var video_player = document.querySelector(this.el.getAttribute('src'));
           
           el.addEventListener('mouseenter', function () {
-            if (this.video_player.paused)
-              this.video_player.play();
+            if (video_player.paused)
+              video_player.play();
           });
           
           el.addEventListener('mouseleave', function () {
-            if (!this.video_player.paused)
-              this.video_player.pause();
+            if (!video_player.paused)
+              video_player.pause();
           });
         }
       });
