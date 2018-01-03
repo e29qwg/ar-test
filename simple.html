@@ -7,12 +7,14 @@
     
     <script>
       AFRAME.registerComponent('play-on-hover', {
-        schema: {
-        },
         init: function () {
           var el = this.el;
           var video_player = el.getAttribute('material').src;
           
+          console.log(el);
+          console.log(el.src);
+          console.log(video_player);
+          /**
           el.addEventListener('mouseenter', function () {
             if (video_player.paused)
               video_player.play();
@@ -22,6 +24,7 @@
             if (!video_player.paused)
               video_player.pause();
           });
+          **/
         }
       });
     </script>
