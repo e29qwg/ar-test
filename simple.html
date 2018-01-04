@@ -51,8 +51,9 @@
     </a-scene>
     
     <script>
-      if (video_player.paused)
-        video_player.play();
+      // Auto-start Beach Video
+      if (document.querySelector('#beach').paused)
+        document.querySelector('#beach').play();
     </script>
   </body>
 </html>
