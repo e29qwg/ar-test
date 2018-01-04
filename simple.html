@@ -4,6 +4,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.4.9/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
     
     <script>
       AFRAME.registerComponent('play-on-hover', {
@@ -41,6 +42,7 @@
       
       <a-marker type="barcode" value="20">
         <a-video src="#beach" width="4" height="3" play-on-hover></a-video>
+        <a-entity video-controls="src: #beach"></a-entity>
       </a-marker>
       
       <!-- <a-video src="#beach" width="16" height="9" play-on-hover></a-video> -->
