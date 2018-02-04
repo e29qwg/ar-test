@@ -38,6 +38,8 @@
           var video = this.el.components.material.material.map.image;
           if (!video) { return; }
           video.paused ? video.play() : video.pause();
+          video.muted = false;
+          video.volume = 0.8;
         }
       });
     </script>
